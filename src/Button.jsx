@@ -6,7 +6,7 @@ const Spinner = () => {
 };
 const Button = ({ text, loading, onClick }) => {
   return (
-    <button className="btn" onClick={onClick && onClick}>
+    <button className="btn" onClick={onClick && onClick} disabled={loading}>
       {loading ? <Spinner /> : null}
       {text}
     </button>
